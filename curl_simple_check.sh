@@ -3,10 +3,10 @@
 i=0
 cat all_name.txt | while read line
 do
-  if [ $i -lt 11260 ]; then
-    i=`expr 1 + $i`
-    continue
-  fi
+  # if [ $i -lt 11260 ]; then
+  #   i=`expr 1 + $i`
+  #   continue
+  # fi
   # code=`curl -d "value=$line" -fsSL -b c -w '%{http_code}' -o /dev/null 'https://github.com/signup_check/username'`
   # code=`curl -sS -o /dev/null -w '%{response_code}' "https://github.com/$line"`
   code=`curl -sS -o /dev/null -w '%{response_code}' "https://github.com/identicons/$line.png"`
