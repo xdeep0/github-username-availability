@@ -10,7 +10,7 @@ for i in letters:
     f.write(i + j + '\n')
 
 for i in letters:
-  for j in letters:
+  for j in letters + ['-']:
     for k in letters:
       f.write(i + j + k + '\n')
 f.close()
