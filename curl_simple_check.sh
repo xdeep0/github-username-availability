@@ -1,9 +1,9 @@
-# 2>&1 | tee -a log.txt  # 出力を画面とファイル両方に出力 (ex: ./x.sh 2>&1 | tee -a log.txt)
+# 2>&1 | tee -a log.txt  # output to stdout and file (ex: ./x.sh 2>&1 | tee -a log.txt)
 # curl -fsSL -c c -o /dev/null 'https://github.com'
 i=0
 cat all_name.txt | while read line
 do
-  # if [ $i -lt 11260 ]; then
+  # if [ $i -lt 0 ]; then
   #   i=`expr 1 + $i`
   #   continue
   # fi
