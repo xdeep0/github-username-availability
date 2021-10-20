@@ -1,5 +1,6 @@
 # 2>&1 | tee -a log.txt  # output to stdout and file (ex: ./x.sh 2>&1 | tee -a log.txt)
 # curl -fsSL -c c -o /dev/null 'https://github.com'
+sudo apt -qq install -y bc > /dev/null 2>&1
 i=0
 cat all_name.txt | while read line
 do
