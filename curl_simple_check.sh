@@ -8,7 +8,8 @@ do
     continue
   fi
   # code=`curl -d "value=$line" -fsSL -b c -w '%{http_code}' -o /dev/null 'https://github.com/signup_check/username'`
-  code=`curl -sS -o /dev/null -w '%{response_code}' "https://github.com/$line"`
+  # code=`curl -sS -o /dev/null -w '%{response_code}' "https://github.com/$line"`
+  code=`curl -sS -o /dev/null -w '%{response_code}' "https://github.com/identicons/$line.png"`
   if [ $code -eq 404 ]; then
     echo $i: [$code] $line 'available'
     echo $line >> available_name.txt
